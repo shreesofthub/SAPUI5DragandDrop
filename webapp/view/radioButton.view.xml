@@ -1,0 +1,17 @@
+<mvc:View
+    controllerName="dragdrop.controller.radioButton"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page id="idDragDrop4P" title="Drag and Drop configuration of Table">
+        <VBox id="idVBoxDragDrop1">
+            <RadioButtonGroup id="idRbg1">
+                <RadioButton id="idRb1" text="Delete the table Rows using DragDrop Method-(sap.m.Table in View)"></RadioButton>
+                <RadioButton id="idRb2" text="Sort the List items by Drag and Drop-(sap.m.List in View)"></RadioButton>
+                <RadioButton id="idRb3" text="Move table records from one table to another using Drag and Drop-(sap.ui.table.Table in View)"></RadioButton>
+            </RadioButtonGroup>
+            <Button id="idBtn10" text="Next" press="onNext"></Button>
+        </VBox>
+    </Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View controllerName="dragdrop.controller.listSort"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:dnd="sap.ui.core.dnd">
+          <Page title="List Display-Sorting line items by DragDrop Method" 
+                id="idDragDrop4P" 
+                showNavButton="true" 
+                navButtonPress="onBack">
+            <List id="idDDList1" items="{/Products}">
+                <items>
+                    <StandardListItem id="idDDSList1" info="{qty}" description="{category}" title="{name}">
+                        <!-- <dragDropConfig> -->
+                            <!-- <dnd:DragDropInfo id="idDDInfo1" dragStart="onDragStart" drop="onDrop">
+                            </dnd:DragDropInfo> -->
+                            <!-- <dnd:DragInfo id="DragInfo" sourceAggregation="items"></dnd:DragInfo>
+                        </dragDropConfig> -->
+                    </StandardListItem>
+                </items>
+            </List>
+          </Page>
+</mvc:View>          

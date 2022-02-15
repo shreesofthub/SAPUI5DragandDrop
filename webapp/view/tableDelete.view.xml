@@ -1,0 +1,48 @@
+<mvc:View controllerName="dragdrop.controller.tableDelete"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:dnd="sap.ui.core.dnd"
+          xmlns:customControl="dragdrop.controller">
+          <Page id="idDragDrop3P" title="Delete the Selected Record by Drag and Drop Technique"
+                showNavButton="true" navButtonPress="onBack">
+                <Table id="idTable1" 
+                        alternateRowColors="true" items="{/Products}">
+                    <dragDropConfig>
+                        <dnd:DragInfo id="idDragInfo1" sourceAggregation="items"/>
+                    </dragDropConfig>
+                    <columns>
+                        <Column id="idColumn1">
+                            <header>
+                                <Label id="idLabel1" text="Product Name"></Label>
+                            </header>
+                        </Column>
+                        <Column id="idColumn2">
+                            <header>
+                                <Label id="idLabel2" text="Category"></Label>
+                            </header>
+                        </Column>
+                        <Column id="idColumn3">
+                            <header>
+                                <Label id="idLabel3" text="Quantity"></Label>
+                            </header>
+                        </Column>
+                    </columns>
+                    <ColumnListItem id="idColumnListItem1">
+                        <cells>
+                            <Text id="idText1" text="{name}"></Text>
+                            <Text id="idText2" text="{category}"></Text>
+                            <Text id="idText3" text="{qty}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </Table>
+                <footer>
+                    <Toolbar id="idToolBAr1">
+                        <customControl:DeleteButton id="idBtn1" text="Delete" type="Reject" width="100%" >
+                            <customControl:dragDropConfig >
+                                <dnd:DropInfo id="idDropInfo1" drop="onDrop"></dnd:DropInfo>
+                            </customControl:dragDropConfig>
+                        </customControl:DeleteButton>
+                    </Toolbar>
+                </footer>
+           </Page> 
+</mvc:View>
